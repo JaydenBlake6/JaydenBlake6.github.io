@@ -1,99 +1,374 @@
 body {
-     font-family: Helvetica, Arial, sans-serif;
-     margin: 0px;
-     font-size: 1.5vw;
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+    font-size: 1.5vw;
 }
 
+
+
 #logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka one", sans-serif;
-    width: 16%;
-    text-shadow:
-    1px 1px 0px black,   /* Bottoom-right shadow */
-    -1px 1px 0px black,   /* Bottoom-left shadow */
-    1px -1px 0px black,   /* Top-right shadow */
-    -1px -1px 0px black;   /* Top-left shadow */
+   margin: 0px;
+   padding: 8px;
+   font-family: "Montserrat", sans-serif;
+   width: 16%;
+   text-shadow:
+   1px 1px 0px black,   /* Bottoom-right shadow */
+   -1px 1px 0px black,   /* Bottoom-left shadow */
+   1px -1px 0px black,   /* Top-right shadow */
+   -1px -1px 0px black;   /* Top-left shadow */
 }
 
 ul {
-    margin: 0px;
+   margin: 0px;
 }
 
 body > header {
-    background-color: orange;
-    color: white;
-    display: flex;
-    height: 12vh;
-    align-items: center;
-    justify-content: space-around;
+   background-color: teal;
+   color: white;
+   display: flex;
+   height: 12vh;
+   align-items: center;
+   justify-content: space-around;
 }
 
 #nav-ul {
-    display: flex
+   display: flex
 }
 
 #nav-ul > li {
-    padding: 8px;
-    margin: 16px;
+   padding: 8px;
+   margin: 16px;
 }
 
 body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
+   list-style: none;
+   text-decoration: none;
 }
 
 .navbutton {
-    color: white; 
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-    border-radius: 10%;
+   color: white; 
+   text-decoration: none;
+   padding: 12px;
+   font-family: "Montserrat", sans-serif;
 
 }
 
 body > main article {
-    width: 80%;
-    margin: auto;
+   width: 80%;
+   margin: auto;
+   font-family: "Montserrat", sans-serif;
+
 }
 
 #main-content {
-    display: flex;
-    justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
 }
 
 #main-content > div {
-    width: 80%;
+   width: 80%;
 }
 
 
 form {
-    text-align: center;
+   text-align: center;
 }
 
 h2 {
-    text-align: center;
+   text-align: center;
 }
 
 body > footer {
-    background-color: orange;
-    display: flex;
+   background-color: teal;
+   display: flex;
 }
 
 img {
-    border-radius: 50%;
+   border-radius: 5%;
 }
 
 #footer-ul {
-    display: flex;
-    list-style: none;
+   display: flex;
+   list-style: none;
 }
 
 #footer-ul > div > li {
-    margin-left: 12px;
+   margin-left: 12px;
 }
 
 #footer-ul > div > li > a {
-    text-decoration: none;
-    color: white;
+   text-decoration: none;
+   color: white;
 }
+
+
+/* Basic styling for the sidebar */
+aside {
+   width: 220px; /* Slightly narrower for a sleeker look */
+   background-color: #f4f4f4; /* Softer background color */
+   padding: 20px;
+   border-radius: 8px; /* More rounded corners for a modern look */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling the section header */
+aside h4 {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 18px;
+   margin-bottom: 15px;
+   color: #333; /* Darker text for contrast */
+   text-transform: uppercase; /* Uppercase for a cleaner title look */
+   letter-spacing: 1px;
+   border-bottom: 2px solid #ccc; /* Border to separate the heading */
+   padding-bottom: 5px;
+}
+
+/* Styling the sidebar navigation menu */
+aside nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+aside nav li {
+   margin-bottom: 15px; /* Increase space between main categories */
+}
+
+aside nav a {
+   text-decoration: none;
+   color: #444; /* Dark grey text color */
+   font-size: 16px;
+   display: block;
+   padding: 10px;
+   border-radius: 4px;
+   background-color: #eee; /* Light background color */
+   transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for main category links */
+aside nav a:hover {
+   background-color: #dcdcdc; /* Slightly darker on hover */
+}
+
+/* Styling for nested lists (subcategories) */
+aside nav ul ul {
+   padding-left: 15px; /* Indent subcategories */
+   margin-top: 10px;
+}
+
+aside nav ul ul a {
+   padding: 8px 15px; /* Smaller padding for subcategories */
+   font-size: 14px; /* Smaller font for subcategories */
+   background-color: #f8f9fa; /* Lighter background for subcategories */
+}
+
+/* Hover effect for subcategories */
+aside nav ul ul a:hover {
+   background-color: #e2e6ea;
+}
+
+/* Visual cue for expandable categories in the sidebar */
+aside nav li > a:after {
+   content: '▼'; /* Down arrow */
+   font-size: 12px;
+   color: #666;
+   float: right;
+   transform: rotate(0deg);
+   transition: transform 0.3s ease; /* Smooth transition */
+}
+
+aside nav li > ul {
+   display: none; /* Hide subcategories by default */
+}
+
+/* Expand subcategories when the parent is hovered */
+aside nav li:hover > ul {
+   display: block;
+}
+
+aside nav li:hover > a:after {
+   transform: rotate(180deg); /* Flip the arrow when expanded */
+}
+
+/* Main navigation at the top (no dropdown functionality) */
+header nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: space-around;
+   background-color: transparent; /* Restore the original background */
+}
+
+header nav ul li {
+   display: inline-block; /* Ensures each item stays inline */
+   margin: 0 15px; /* Adds spacing between items */
+}
+
+header nav ul a {
+   text-decoration: none;
+   color: black; /* Use black or your preferred color for text */
+   padding: 10px 15px; /* Adjust padding to fit the desired button size */
+   display: inline-block;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px; /* Adjust the font size for the top navigation */
+   border-radius: 0; /* Remove any border-radius to keep it flat */
+   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+   background-color: transparent; /* Keep background transparent */
+}
+
+/* Hover effect for top navigation buttons */
+header nav ul a:hover {
+   background-color: #f0f0f0; /* Light grey background on hover */
+   color: #333; /* Darker text color on hover */
+}
+
+/* Ensure no dropdown arrow is shown on top navigation */
+header nav li > a:after {
+   content: none;
+}
+
+/* Styling the 'You May Also Like' section */
+.you-may-also-like {
+   margin-top: 50px;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+}
+
+.you-may-also-like h3 {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 24px;
+   color: #333;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+/* Layout for the recommended recipes */
+.recommended-recipes {
+   display: flex;
+   justify-content: space-around;
+}
+
+.recipe {
+   text-align: center;
+   width: 30%;
+}
+
+.recipe img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+}
+
+.recipe h4 {
+   margin-top: 10px;
+   font-size: 18px;
+}
+
+.recipe a {
+   text-decoration: none;
+   color: #444;
+}
+
+.recipe a:hover {
+   color: #ffb900; /* Change color on hover to highlight */
+}
+
+#related-foods {
+   margin-top: 20px;
+}
+
+.food-items {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start; /* Ensures items align at the top */
+}
+
+.food-item {
+   text-align: center;
+   margin: 0 10px;
+   width: 150px; /* Set a fixed width for each food item to ensure consistency */
+}
+
+.food-item img {
+   width: 150px;
+   height: 150px; /* Ensures all images are the same size */
+   object-fit: cover; /* Keeps aspect ratio and fills the space */
+}
+
+.food-item h3 {
+   font-size: 1.2em; /* Adjust the heading size for all items */
+   margin: 10px 0 5px; /* Consistent margin between the image and text */
+}
+
+.food-item p {
+   font-size: 0.9em; /* Adjusts the paragraph size for consistency */
+   margin: 0; /* Removes any extra space below the text */
+   line-height: 1.4; /* Adjust the line spacing for better readability */
+}
+
+#rating-comments {
+   margin-top: 50px;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 10px;
+}
+
+#rating-comments h2 {
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.rating-section label,
+.comment-section label {
+   font-size: 18px;
+   display: block;
+   margin-bottom: 10px;
+}
+
+#comment {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+#submit-review {
+   padding: 10px 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+#submit-review:hover {
+   background-color: #0056b3;
+}
+
+#comment-display {
+   margin-top: 30px;
+}
+
+#comment-display h3 {
+   font-size: 20px;
+   margin-bottom: 15px;
+}
+
+.user-comment {
+   padding: 15px;
+   background-color: #fff;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   margin-bottom: 10px;
+}
+
+.user-comment p {
+   margin: 0;
+   font-size: 16px;
+}
+
